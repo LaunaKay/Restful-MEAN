@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Dashboard</title>
+	<script type="text/javascript" src="/js/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="/js/lib/angular/angular-route.js"></script>
+	<script type="text/javascript" src="/js/modules.js"></script>
+	<script type="text/javascript" src="/js/factories.factory.js"></script>
+	<script type="text/javascript" src="/js/controllers.ctrl.js"></script>
+</head>
+<body ng-controller="MainController as main">
+	<h1>Main</h1>
+	<nav>
+		<a href="#/">Home</a>
+		<a href="#/users">Users</a>
+	</nav>
+	<div ng-view></div>
+</body>
+</html>
