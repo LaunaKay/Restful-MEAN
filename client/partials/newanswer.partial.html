@@ -1,0 +1,21 @@
+<div class="container" ng-controller="QuestionsController as ansC">
+    <h1>{{ansC.post.question}}</h1>
+    <h2> {{ansC.post.description}}</h2>
+    <form
+    name="form"
+    novalidate
+    ng-submit="ansC.addAnswer(ansC.newAnswer)">
+    <legend>add an answer</legend>
+
+    <div class="form-group">
+        <label for="answer">Answer:</label>
+        <input ng-model="ansC.newAnswer.answer" minlength = "5" type="text" class="form-control" name="answer" id="answer" placeholder="enter answer">
+    </div>
+    <div class="form-group">
+        <label for="details">Details (optional):</label>
+        <input ng-model="ansC.newAnswer.details" name="details" type="text" class="form-control" id="details" placeholder="enter details optional">
+    </div>
+    <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Submit</button>
+    <a class="btn btn-sm btn-primary" href="#/" role="button">Cancel</a>
+</form>
+</div>

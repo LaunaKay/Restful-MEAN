@@ -1,1 +1,20 @@
-<h1>Home Partial</h1>
+<div class="container" ng-controller="QuestionsController as getQ">
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Answers</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <label style="float:right">Search:   <input ng-model="searchQuestion"></label>
+    <tbody ng-repeat = "question in getQ.questions | orderBy: '-created_at' | filter:searchQuestion">
+        <tr>
+            <td ng-bind="question.question"></td>
+            <td ng-bind="question.answers.length"></td>
+            <td><a href="#/question/{{question._id}}">Show</a> </td>
+            <td><a href="#/question/new_answer/{{question._id}}">Answer</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>

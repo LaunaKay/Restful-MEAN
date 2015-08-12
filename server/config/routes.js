@@ -1,20 +1,24 @@
 module.exports = function(app) {
-  	var users = require('../controllers/users.js');
+  	var questions = require('../controllers/questions.js');
 	app
 
-	// - - - User - - -
+	// - - - Questions - - -
     // Index
-	.get('/users', function(request, response) { users.index(request, response) })
+	.get('/questions', function(request, response) { questions.index(request, response) })
 	// New
-	.get('/users/new', function(request, response) { users.create(request, response) })
+	.get('/questions/new', function(request, response) { questions.create(request, response) })
 	// Show
-	.get('/users/:id', function(request, response) { users.show(request, response) })
-	// Edit 
-	.post('/users/:id/edit', function(request, response) { users.update(request, response) })
+	.get('/questions/:id', function(request, response) {
+		console.log('request');
+		questions.show(request, response) })
+	// Edit
+	.post('/questions/:id/edit', function(request, response) { questions.update(request, response) })
 	// Create
-	.post('/users', function(request, response) { users.create(request, response) })	
+	.post('/questions', function(request, response) { questions.create(request, response) })
 	// Destroy
-	.delete('/users/:id', function(request, response) { users.destroy(request, response) })
+	.delete('/questions/:id', function(request, response) { questions.destroy(request, response) })
 	// Update
-	.put('/users/:id', function(request, response) { users.update(request, response) })
+	.put('/questions/:id', function(request, response) { questions.update(request, response) })
+	//Update Likes
+	.put('/questions/:id/like', function(request, response){questions.updateLike(request, response)})
 };

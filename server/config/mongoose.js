@@ -1,7 +1,7 @@
 mongoose = require('mongoose');
 var fs = require('fs');
 
-mongoose.connect('mongodb://localhost/projectMEANSchema');
+mongoose.connect('mongodb://localhost/BlackPrac');
 
 var models_path = __dirname + '/../models';
 

@@ -1,0 +1,15 @@
+a {
+    font-size:24px;
+    padding: 25px;
+    color: darkblue;
+}
+
+li {
+    font-size 16 px;
+    padding:5px;
+}
+
+ul {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+}

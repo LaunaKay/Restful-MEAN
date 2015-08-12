@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-	<title>Dashboard</title>
-	<script type="text/javascript" src="/js/lib/angular/angular.js"></script>
-	<script type="text/javascript" src="/js/lib/angular/angular-route.js"></script>
+	<title>Q&A</title>
+<!-- BOOTSTRAP -->
+	<script src="lib/jquery/dist/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<!-- DEPENDENCIES -->
+	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="lib/moment/min/moment.min.js"></script>
+	<script type="text/javascript" src="lib/momentjs/min/moment.min.js"></script>
+	<script type="text/javascript" src="lib/angular-moment/angular-moment.min.js"></script>
+
+<!-- APPSPECIFIC -->
 	<script type="text/javascript" src="/js/modules.js"></script>
 	<script type="text/javascript" src="/js/factories.factory.js"></script>
 	<script type="text/javascript" src="/js/controllers.ctrl.js"></script>
+
 </head>
 <body ng-controller="MainController as main">
-	<h1>Main</h1>
-	<nav>
-		<a href="#/">Home</a>
-		<a href="#/users">Users</a>
-	</nav>
-	<div ng-view></div>
+	<div class="container">
+		<script type="text/javascript"> name = prompt("Please enter your name")</script>
+		<h1 style="margin-bottom:50px;">Welcome to Q&A</h1>
+		<nav style="margin-bottom: 75px;">
+			<a href="#/">Home</a>
+			<a href="#/new_question">Add a Question</a>
+			<a href="#/logout">Logout</a>
+		</nav>
+		<div ng-view></div>
+	</div>
 </body>
 </html>
